@@ -1,0 +1,750 @@
+{
+    "count": 1024,
+    "next": "https://api.maalbardaar.com/shipments-app/shipments/?page=2",
+    "previous": null,
+    "results": [
+      {
+        "id": "searoute-test-001",
+        "shipment_order_number": "MB20251220-0001",
+        "master_bill_of_lading_number": null,
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "Test Shipment - Searoute Integration",
+        "customer_ref_number": "",
+        "internal_ref_number": [
+          "SEAROUTE-TEST"
+        ],
+        "consignee_name": "Test Consignee",
+        "shipper_name": "Test Shipper",
+        "origin": "KARACHI, PAKISTAN",
+        "destination": "SHANGHAI, CHINA",
+        "is_automated_tracking": false,
+        "sailing_status": "Pending",
+        "shipment_milestones": [
+          {
+            "milestone_type": 0,
+            "milestone_type_display": "Empty to shipper",
+            "start_date": null,
+            "status": null
+          },
+          {
+            "milestone_type": 1,
+            "milestone_type_display": "Departure from first POL",
+            "start_date": null,
+            "status": null
+          },
+          {
+            "milestone_type": 2,
+            "milestone_type_display": "Arrival at final POD",
+            "start_date": null,
+            "status": null
+          },
+          {
+            "milestone_type": 3,
+            "milestone_type_display": "Delivery to consignee",
+            "start_date": null,
+            "status": null
+          }
+        ],
+        "packages": [],
+        "containers": [
+          {
+            "type": "40HC",
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "is_pinned": false,
+        "status_updated_at": "2025-12-20T00:00:00+05:00",
+        "created_at": "2025-12-20T00:00:00+05:00"
+      },
+      {
+        "id": "seawaylogistics-sonmiani-karaginsky-test",
+        "shipment_order_number": "MB20260110-TEST1",
+        "master_bill_of_lading_number": null,
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "Test Route - Sonmiani (Pakistan) to Karaginsky District (Kamchatka, Russia) via SeawaylogisticsScience",
+        "customer_ref_number": "",
+        "internal_ref_number": [
+          "SEAWAYLOGISTICS-SCIENCE"
+        ],
+        "consignee_name": "SeawaylogisticsScience Test Consignee",
+        "shipper_name": "SeawaylogisticsScience Test Shipper",
+        "origin": "SONMIANI, PAKISTAN",
+        "destination": "KARAGINSKY DISTRICT, KAMCHATKA, RUSSIA",
+        "is_automated_tracking": false,
+        "sailing_status": "Pending",
+        "shipment_milestones": [
+          {
+            "milestone_type": 0,
+            "milestone_type_display": "Empty to shipper",
+            "start_date": null,
+            "status": null
+          },
+          {
+            "milestone_type": 1,
+            "milestone_type_display": "Departure from first POL",
+            "start_date": null,
+            "status": null
+          },
+          {
+            "milestone_type": 2,
+            "milestone_type_display": "Arrival at final POD",
+            "start_date": null,
+            "status": null
+          },
+          {
+            "milestone_type": 3,
+            "milestone_type_display": "Delivery to consignee",
+            "start_date": null,
+            "status": null
+          }
+        ],
+        "packages": [],
+        "containers": [
+          {
+            "type": "40HC",
+            "quantity": 1
+          }
+        ],
+        "status": "pending",
+        "is_pinned": false,
+        "status_updated_at": "2026-01-10T00:00:00+05:00",
+        "created_at": "2026-01-10T00:00:00+05:00"
+      },
+      {
+        "id": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+        "shipment_order_number": "MB20251113-0004",
+        "master_bill_of_lading_number": "MEDUFX863329",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "BRAZILIAN GINNED COTTON BCI, MIDDLING 1.1/8 3.5 5.2, NCL - GPT 28 MIN BCI CROP 2025",
+        "customer_ref_number": "0001LC79589/2025",
+        "internal_ref_number": [
+          "S0536202526"
+        ],
+        "consignee_name": "Reliance Weaving Mills Limited",
+        "shipper_name": "StoneX Switzerland SA",
+        "origin": "SANTOS, BRAZIL",
+        "destination": "MUHAMMAD BIN QASIM (PORT QASIM), PAKISTAN",
+        "is_automated_tracking": true,
+        "sailing_status": "Sailing",
+        "shipment_milestones": [
+          {
+            "milestone_type": 1,
+            "milestone_type_display": "Departure from first POL",
+            "start_date": "2025-10-29T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type": 2,
+            "milestone_type_display": "Arrival at final POD",
+            "start_date": "2025-12-11T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "bales",
+            "number_of_packages": "528.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "40HC",
+            "quantity": 5
+          }
+        ],
+        "status": "in_transit",
+        "is_pinned": false,
+        "status_updated_at": "2025-11-19T08:51:37.175344+05:00",
+        "created_at": "2025-11-13T10:54:27.759609+05:00"
+      },
+      {
+        "id": "3faf2fbd-b4f3-4ec8-a32a-5755bfc3391a",
+        "shipment_order_number": "MB20250307-0001",
+        "master_bill_of_lading_number": "799510005413",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "TOLUENE DIISOCYANATE (TDI 80/20)",
+        "customer_ref_number": "0059ILC069196",
+        "internal_ref_number": [
+          "S0965202425"
+        ],
+        "consignee_name": "POLYFOAM PRIVATE LIMITED",
+        "shipper_name": "SINOCHEM INTERNATIONAL (OVERSEAS) PTE LTD",
+        "origin": "QINGDAO, CHINA",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": null,
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-01-16T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-02-11T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": "2025-05-16T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "drums",
+            "number_of_packages": "161.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "20DC",
+            "quantity": 2
+          }
+        ],
+        "is_pinned": false,
+        "status": "delivered",
+        "status_updated_at": "2025-10-11T15:47:29.998014+05:00"
+      },
+      {
+        "id": "8714e15f-3a76-46dd-a393-e2a48e73d1df",
+        "shipment_order_number": "MB20250320-0004",
+        "master_bill_of_lading_number": null,
+        "house_bill_of_lading_number": "FBKHI250004",
+        "consignment_mode": "LCL",
+        "item_description": "TP400M",
+        "customer_ref_number": "009LC55536/2025",
+        "internal_ref_number": [
+          "S1070202425"
+        ],
+        "consignee_name": "Dynamic Packaging Pvt Ltd",
+        "shipper_name": "HANWHA SOLUTIONS CORPRORATION",
+        "origin": "BUSAN, SOUTH KOREA",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "False",
+        "sailing_status": null,
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-01-20T11:10:44+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-01-20T11:10:46+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-02-11T11:10:47+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": "2025-05-15T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "pallets",
+            "number_of_packages": "4.0000"
+          }
+        ],
+        "containers": [],
+        "is_pinned": false,
+        "status": "delivered",
+        "status_updated_at": "2025-10-11T15:47:38.151488+05:00"
+      },
+      {
+        "id": "d0c8573c-3204-4ed6-be69-acfff91447dc",
+        "shipment_order_number": "MB20250320-0001",
+        "master_bill_of_lading_number": "BKKF19739400",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "NITROCELLULOSE",
+        "customer_ref_number": "0099LC55247/2025",
+        "internal_ref_number": [
+          "S0929202425"
+        ],
+        "consignee_name": "Global Inks & Chemicals Pvt Ltd",
+        "shipper_name": "ABC CHEMICAL EXPORTS PVT LTD",
+        "origin": "LAEM CHABANG, THAILAND",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-01-27T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-02-01T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-02-14T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": "2025-04-18T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "drums",
+            "number_of_packages": "80.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "20DC",
+            "quantity": 1
+          }
+        ],
+        "is_pinned": false,
+        "status": "delivered",
+        "status_updated_at": "2025-10-11T15:47:45.789719+05:00"
+      },
+      {
+        "id": "bc23d1a1-d4c0-4f89-8589-82f7610d9ee2",
+        "shipment_order_number": "MB20251207-0002",
+        "master_bill_of_lading_number": "AKI0560100",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "BEACH TOWEL HOODED PONCHO.",
+        "customer_ref_number": "10001088326",
+        "internal_ref_number": [
+          "DEMO3"
+        ],
+        "consignee_name": "Target",
+        "shipper_name": "Feroze1888 Mills Limited",
+        "origin": "PORT QASIM, PAKISTAN",
+        "destination": "NORFLOK, USA",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-01-01T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-01-09T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-02-23T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": null,
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "cartons",
+            "number_of_packages": "2465.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "40HC",
+            "quantity": 1
+          }
+        ],
+        "is_pinned": false,
+        "status": "closed",
+        "status_updated_at": "2025-12-07T11:51:09.785453+05:00"
+      },
+      {
+        "id": "fbad1693-2796-4218-93e7-6ac41a395c69",
+        "shipment_order_number": "MB20250321-0001",
+        "master_bill_of_lading_number": null,
+        "house_bill_of_lading_number": "EURFL25106677KHI",
+        "consignment_mode": "LCL",
+        "item_description": "PE WAX DR-0395",
+        "customer_ref_number": "0099LC55017/2025",
+        "internal_ref_number": [
+          "S1071202425"
+        ],
+        "consignee_name": "Global Inks & Chemicals Pvt Ltd",
+        "shipper_name": "ANHUI DERUN IMPORT AND EXPORT TRADING CO LTD.",
+        "origin": "SHANGHAI, CHINA",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-01-22T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-01-28T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-02-24T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": null,
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "bags",
+            "number_of_packages": "70.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "40HC",
+            "quantity": 1
+          }
+        ],
+        "is_pinned": false,
+        "status": "delivered",
+        "status_updated_at": "2025-10-11T15:47:49.722089+05:00"
+      },
+      {
+        "id": "527e7090-0d2f-44f9-894a-95e30ad05c2d",
+        "shipment_order_number": "MB20250310-0015",
+        "master_bill_of_lading_number": "250114570",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "HE3490LS HD POLYETHYLENE",
+        "customer_ref_number": "3004LCS2500911PK",
+        "internal_ref_number": [
+          "S0961202425"
+        ],
+        "consignee_name": "Alpha Pipe Industries Pvt Ltd",
+        "shipper_name": "BOROUGE PTE LTD",
+        "origin": "KHALIFA, ABU DHABI",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-02-12T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-02-15T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-02-25T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": "2025-03-18T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "bags",
+            "number_of_packages": "4950.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "40HC",
+            "quantity": 5
+          }
+        ],
+        "is_pinned": false,
+        "status": "closed",
+        "status_updated_at": "2025-10-11T15:47:32.675565+05:00"
+      },
+      {
+        "id": "90bf3c8e-ba93-4db6-9017-2c9f0056890e",
+        "shipment_order_number": "MB20250310-0014",
+        "master_bill_of_lading_number": "250114447",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "HE3490LS HD POLYETHYLENE",
+        "customer_ref_number": "3004LCS2500971PK",
+        "internal_ref_number": [
+          "S0960202425"
+        ],
+        "consignee_name": "Alpha Pipe Industries Pvt Ltd",
+        "shipper_name": "BOROUGE PTE LTD",
+        "origin": "KHALIFA, ABU DHABI",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-02-12T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-02-15T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-02-25T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": "2025-03-18T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "bags",
+            "number_of_packages": "4950.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "40HC",
+            "quantity": 5
+          }
+        ],
+        "is_pinned": false,
+        "status": "delivered",
+        "status_updated_at": "2025-10-11T15:47:39.288890+05:00"
+      },
+      {
+        "id": "5420a089-d7b4-4e4b-8695-89eb822d611d",
+        "shipment_order_number": "MB20250310-0011",
+        "master_bill_of_lading_number": "NGB500071200",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "POLYPROPYLENE PPH-Y40",
+        "customer_ref_number": "25INSU006600343",
+        "internal_ref_number": [
+          "S0985202425"
+        ],
+        "consignee_name": "Al-Khair Global Pvt Ltd",
+        "shipper_name": "AN THANH BICSOL JSC.",
+        "origin": "NINGBO, CHINA",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-01-23T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-02-07T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-03-06T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": "2025-05-01T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "bags",
+            "number_of_packages": "2160.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "40HC",
+            "quantity": 2
+          }
+        ],
+        "is_pinned": false,
+        "status": "delivered",
+        "status_updated_at": "2025-10-11T15:47:32.874928+05:00"
+      },
+      {
+        "id": "535791b3-6488-4c41-bccc-b79ae348dd69",
+        "shipment_order_number": "MB20250310-0012",
+        "master_bill_of_lading_number": "HLCUDOH250202992",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "LDPE LOTRENE FD0274",
+        "customer_ref_number": "24INSU006613299",
+        "internal_ref_number": [
+          "S0986202425"
+        ],
+        "consignee_name": "Al-Khair Global Pvt Ltd",
+        "shipper_name": "Engro Eximp FZE",
+        "origin": "MESAIEED, QATAR",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-02-05T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-02-13T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-03-07T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": "2025-04-01T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "bags",
+            "number_of_packages": "2040.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "40DC",
+            "quantity": 2
+          }
+        ],
+        "is_pinned": false,
+        "status": "delivered",
+        "status_updated_at": "2025-10-11T15:47:32.759564+05:00"
+      },
+      {
+        "id": "9cfd0c3c-db5b-455f-a1b6-faa1d4c973e1",
+        "shipment_order_number": "MB20250310-0013",
+        "master_bill_of_lading_number": "HLCUDOH250202440",
+        "house_bill_of_lading_number": null,
+        "consignment_mode": "FCL",
+        "item_description": "LDPE LOTRENE FD0274",
+        "customer_ref_number": "24INSU006613298",
+        "internal_ref_number": [
+          "S0984202425"
+        ],
+        "consignee_name": "Al-Khair Global Pvt Ltd",
+        "shipper_name": "Engro Eximp FZE",
+        "origin": "MESAIEED, QATAR",
+        "destination": "KARACHI, PAKISTAN",
+        "is_automated_tracking": "True",
+        "sailing_status": "Discharged",
+        "shipment_milestones": [
+          {
+            "milestone_type_display": "Empty to shipper",
+            "milestone_type": 0,
+            "start_date": "2025-02-05T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Departure from first POL",
+            "milestone_type": 1,
+            "start_date": "2025-02-13T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Arrival at final POD",
+            "milestone_type": 2,
+            "start_date": "2025-03-07T00:00:00+05:00",
+            "status": null
+          },
+          {
+            "milestone_type_display": "Delivery to consignee",
+            "milestone_type": 3,
+            "start_date": "2025-03-28T00:00:00+05:00",
+            "status": null
+          }
+        ],
+        "packages": [
+          {
+            "package_type": "bags",
+            "number_of_packages": "2040.0000"
+          }
+        ],
+        "containers": [
+          {
+            "type": "40DC",
+            "quantity": 2
+          }
+        ],
+        "is_pinned": false,
+        "status": "delivered",
+        "status_updated_at": "2025-10-11T15:47:40.322303+05:00"
+      }
+    ]
+  }

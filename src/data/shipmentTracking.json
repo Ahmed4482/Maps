@@ -1,0 +1,1554 @@
+{
+  "shipments": [
+    {
+      "shipment_order_number": "MB20251220-0001",
+      "shipment_id": "searoute-test-001",
+      "shipment_status": "pending",
+      "route_info": {
+        "origin": {
+          "port_name": "KARACHI, PAKISTAN",
+          "port_code": "PKKHI",
+          "coordinates": {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        },
+        "destination": {
+          "port_name": "SHANGHAI, CHINA",
+          "port_code": "CNSHA",
+          "coordinates": {
+            "latitude": 31.2304,
+            "longitude": 121.4737
+          }
+        },
+        "transshipment_ports": [],
+        "route_type": "direct"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "TBD",
+          "vessel_imo": null,
+          "from_port": "KARACHI, PAKISTAN",
+          "to_port": "SHANGHAI, CHINA",
+          "departure_date": null,
+          "arrival_date": null
+        }
+      ],
+      "current_position": {
+        "latitude": 24.8414,
+        "longitude": 67.0011,
+        "location_name": "KARACHI, PAKISTAN",
+        "timestamp": "2025-12-20T00:00:00+05:00",
+        "vessel_name": null,
+        "vessel_imo": null,
+        "status": "Pending",
+        "current_leg": 1
+      },
+      "route_coordinates": {
+        "completed_route": [],
+        "remaining_route": [
+          {
+            "latitude": 24.817412,
+            "longitude": 66.975702
+          },
+          {
+            "latitude": 24.3,
+            "longitude": 66.6
+          },
+          {
+            "latitude": 22.543001,
+            "longitude": 68.719482
+          },
+          {
+            "latitude": 20.809334,
+            "longitude": 69.592463
+          },
+          {
+            "latitude": 20,
+            "longitude": 70
+          },
+          {
+            "latitude": 19,
+            "longitude": 72.4
+          },
+          {
+            "latitude": 15.3,
+            "longitude": 73
+          },
+          {
+            "latitude": 12.4,
+            "longitude": 74.3
+          },
+          {
+            "latitude": 9.7,
+            "longitude": 75.3
+          },
+          {
+            "latitude": 8,
+            "longitude": 77
+          },
+          {
+            "latitude": 5.8,
+            "longitude": 80.1
+          },
+          {
+            "latitude": 5.9,
+            "longitude": 81.9
+          },
+          {
+            "latitude": 6.1983,
+            "longitude": 85.9479
+          },
+          {
+            "latitude": 6.4664,
+            "longitude": 90
+          },
+          {
+            "latitude": 6.7,
+            "longitude": 94
+          },
+          {
+            "latitude": 7,
+            "longitude": 97
+          },
+          {
+            "latitude": 3.2,
+            "longitude": 100.6
+          },
+          {
+            "latitude": 2,
+            "longitude": 102
+          },
+          {
+            "latitude": 1.1,
+            "longitude": 103.6
+          },
+          {
+            "latitude": 1.341312,
+            "longitude": 104.482294
+          },
+          {
+            "latitude": 7.6091,
+            "longitude": 107.3207
+          },
+          {
+            "latitude": 12.2,
+            "longitude": 110.1
+          },
+          {
+            "latitude": 16.378371,
+            "longitude": 111.810965
+          },
+          {
+            "latitude": 16.951468,
+            "longitude": 112.045638
+          },
+          {
+            "latitude": 16.9609,
+            "longitude": 112.0495
+          },
+          {
+            "latitude": 21.7,
+            "longitude": 114.1
+          },
+          {
+            "latitude": 23,
+            "longitude": 117
+          },
+          {
+            "latitude": 23.765237,
+            "longitude": 118.103027
+          },
+          {
+            "latitude": 24.542126,
+            "longitude": 118.937988
+          },
+          {
+            "latitude": 25.085599,
+            "longitude": 119.761963
+          },
+          {
+            "latitude": 25.7,
+            "longitude": 120
+          },
+          {
+            "latitude": 27.8,
+            "longitude": 121.3
+          },
+          {
+            "latitude": 28.733947,
+            "longitude": 122.211914
+          },
+          {
+            "latitude": 30.181935,
+            "longitude": 122.875214
+          },
+          {
+            "latitude": 30.8345,
+            "longitude": 122.6776
+          },
+          {
+            "latitude": 30.732393,
+            "longitude": 121.827393
+          }
+        ]
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": null,
+          "status": "pending",
+          "location": "KARACHI, PAKISTAN"
+        },
+        "arrival_at_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "departure_from_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "arrival_at_destination": {
+          "date": null,
+          "status": "pending",
+          "location": "SHANGHAI, CHINA"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": null,
+        "transit_time": null,
+        "sailing_status": "Pending",
+        "live_tracking_link": null,
+        "last_updated": "2025-12-20T00:00:00+05:00"
+      }
+    },
+    {
+      "shipment_order_number": "MB20251113-0004",
+      "shipment_id": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "shipment_status": "in_transit",
+      "route_info": {
+        "origin": {
+          "port_name": "SANTOS, BRAZIL",
+          "port_code": "BRSST",
+          "coordinates": {
+            "latitude": -23.9608,
+            "longitude": -46.3339
+          }
+        },
+        "destination": {
+          "port_name": "MUHAMMAD BIN QASIM (PORT QASIM), PAKISTAN",
+          "port_code": "PKQCT",
+          "coordinates": {
+            "latitude": 24.7854,
+            "longitude": 67.348
+          }
+        },
+        "transshipment_ports": [
+          {
+            "port_name": "MUNDRA",
+            "port_code": "INMUN",
+            "port_city": "Mundra",
+            "port_country": "India",
+            "coordinates": {
+              "latitude": 22.8394,
+              "longitude": 69.7197
+            },
+            "arrival_date": "2025-12-08T00:00:00+05:00",
+            "departure_date": "2025-12-10T00:00:00+05:00",
+            "vessel_at_transshipment": "MSC LONG BEACH VI",
+            "vessel_imo": "9327803"
+          }
+        ],
+        "route_type": "transshipment"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "MSC KATRINA",
+          "vessel_imo": "9467445",
+          "from_port": "SANTOS, BRAZIL",
+          "to_port": "MUNDRA",
+          "departure_date": "2025-10-29T00:00:00+05:00",
+          "arrival_date": "2025-12-08T00:00:00+05:00"
+        },
+        {
+          "leg": 2,
+          "vessel_name": "MSC LONG BEACH VI",
+          "vessel_imo": "9327803",
+          "from_port": "MUNDRA",
+          "to_port": "MUHAMMAD BIN QASIM, PAKISTAN",
+          "departure_date": "2025-12-10T00:00:00+05:00",
+          "arrival_date": "2025-12-11T00:00:00+05:00"
+        }
+      ],
+      "current_position": {
+        "latitude": 23.5,
+        "longitude": 68.5,
+        "location_name": "Arabian Sea",
+        "timestamp": "2025-12-10T12:00:00+05:00",
+        "vessel_name": "MSC LONG BEACH VI",
+        "vessel_imo": "9327803",
+        "status": "In Transit",
+        "current_leg": 2
+      },
+      "route_coordinates": {
+        "completed_route": [
+          {
+            "latitude": -23.9608,
+            "longitude": -46.3339
+          },
+          {
+            "latitude": -20.0,
+            "longitude": -40.0
+          },
+          {
+            "latitude": -15.0,
+            "longitude": -35.0
+          },
+          {
+            "latitude": -10.0,
+            "longitude": -30.0
+          },
+          {
+            "latitude": -5.0,
+            "longitude": -25.0
+          },
+          {
+            "latitude": 0.0,
+            "longitude": -20.0
+          },
+          {
+            "latitude": 5.0,
+            "longitude": -10.0
+          },
+          {
+            "latitude": 10.0,
+            "longitude": 0.0
+          },
+          {
+            "latitude": 15.0,
+            "longitude": 20.0
+          },
+          {
+            "latitude": 18.0,
+            "longitude": 40.0
+          },
+          {
+            "latitude": 20.0,
+            "longitude": 55.0
+          },
+          {
+            "latitude": 22.8394,
+            "longitude": 69.7197
+          },
+          {
+            "latitude": 23.2,
+            "longitude": 69.0
+          },
+          {
+            "latitude": 23.5,
+            "longitude": 68.5
+          }
+        ],
+        "remaining_route": [
+          {
+            "latitude": 23.5,
+            "longitude": 68.5
+          },
+          {
+            "latitude": 22.862455363636364,
+            "longitude": 68.33412163636363
+          },
+          {
+            "latitude": 24.3,
+            "longitude": 66.6
+          },
+          {
+            "latitude": 24.817412,
+            "longitude": 66.975702
+          }
+        ]
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": "2025-10-29T00:00:00+05:00",
+          "status": "completed",
+          "location": "SANTOS, BRAZIL"
+        },
+        "arrival_at_transshipment": {
+          "date": "2025-12-08T00:00:00+05:00",
+          "status": "completed",
+          "location": "MUNDRA"
+        },
+        "departure_from_transshipment": {
+          "date": "2025-12-10T00:00:00+05:00",
+          "status": "completed",
+          "location": "MUNDRA"
+        },
+        "arrival_at_destination": {
+          "date": "2025-12-11T00:00:00+05:00",
+          "status": "pending",
+          "location": "MUHAMMAD BIN QASIM, PAKISTAN"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": "2025-12-11T00:00:00+05:00",
+        "transit_time": "43 days",
+        "sailing_status": "Sailing",
+        "live_tracking_link": "https://app.maalbardaar.com/tracking?query=GESU6138809",
+        "last_updated": "2025-12-10T12:00:00+05:00"
+      }
+    },
+    {
+      "shipment_order_number": "MB20250307-0001",
+      "shipment_id": "3faf2fbd-b4f3-4ec8-a32a-5755bfc3391a",
+      "shipment_status": "delivered",
+      "route_info": {
+        "origin": {
+          "port_name": "QINGDAO, CHINA",
+          "port_code": "CNTAO",
+          "coordinates": {
+            "latitude": 36.0667,
+            "longitude": 120.3833
+          }
+        },
+        "destination": {
+          "port_name": "KARACHI, PAKISTAN",
+          "port_code": "PKKHI",
+          "coordinates": {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        },
+        "transshipment_ports": [],
+        "route_type": "direct"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "COSCO SHIPPING UNIVERSE",
+          "vessel_imo": "9781234",
+          "from_port": "QINGDAO, CHINA",
+          "to_port": "KARACHI, PAKISTAN",
+          "departure_date": "2025-01-16T00:00:00+05:00",
+          "arrival_date": "2025-02-11T00:00:00+05:00"
+        }
+      ],
+      "current_position": {
+        "latitude": 24.8414,
+        "longitude": 67.0011,
+        "location_name": "KARACHI, PAKISTAN",
+        "timestamp": "2025-05-16T00:00:00+05:00",
+        "vessel_name": null,
+        "vessel_imo": null,
+        "status": "Delivered",
+        "current_leg": 1
+      },
+      "route_coordinates": {
+        "completed_route": [
+          {
+            "latitude": 36.0667,
+            "longitude": 120.3833
+          },
+          {
+            "latitude": 35.0,
+            "longitude": 125.0
+          },
+          {
+            "latitude": 33.0,
+            "longitude": 130.0
+          },
+          {
+            "latitude": 30.0,
+            "longitude": 135.0
+          },
+          {
+            "latitude": 28.0,
+            "longitude": 130.0
+          },
+          {
+            "latitude": 26.0,
+            "longitude": 120.0
+          },
+          {
+            "latitude": 25.5,
+            "longitude": 100.0
+          },
+          {
+            "latitude": 25.0,
+            "longitude": 80.0
+          },
+          {
+            "latitude": 24.9,
+            "longitude": 70.0
+          },
+          {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        ],
+        "remaining_route": []
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": "2025-01-16T00:00:00+05:00",
+          "status": "completed",
+          "location": "QINGDAO, CHINA"
+        },
+        "arrival_at_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "departure_from_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "arrival_at_destination": {
+          "date": "2025-02-11T00:00:00+05:00",
+          "status": "completed",
+          "location": "KARACHI, PAKISTAN"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": "2025-02-11T00:00:00+05:00",
+        "transit_time": "26 days",
+        "sailing_status": "Discharged",
+        "live_tracking_link": "https://app.maalbardaar.com/tracking?query=799510005413",
+        "last_updated": "2025-05-16T00:00:00+05:00"
+      }
+    },
+    {
+      "shipment_order_number": "MB20250320-0001",
+      "shipment_id": "d0c8573c-3204-4ed6-be69-acfff91447dc",
+      "shipment_status": "delivered",
+      "route_info": {
+        "origin": {
+          "port_name": "LAEM CHABANG, THAILAND",
+          "port_code": "THLCH",
+          "coordinates": {
+            "latitude": 13.0833,
+            "longitude": 100.8833
+          }
+        },
+        "destination": {
+          "port_name": "KARACHI, PAKISTAN",
+          "port_code": "PKKHI",
+          "coordinates": {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        },
+        "transshipment_ports": [],
+        "route_type": "direct"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "MSC MARINA",
+          "vessel_imo": "9876543",
+          "from_port": "LAEM CHABANG, THAILAND",
+          "to_port": "KARACHI, PAKISTAN",
+          "departure_date": "2025-02-01T00:00:00+05:00",
+          "arrival_date": "2025-02-14T00:00:00+05:00"
+        }
+      ],
+      "current_position": {
+        "latitude": 24.8414,
+        "longitude": 67.0011,
+        "location_name": "KARACHI, PAKISTAN",
+        "timestamp": "2025-04-18T00:00:00+05:00",
+        "vessel_name": null,
+        "vessel_imo": null,
+        "status": "Delivered",
+        "current_leg": 1
+      },
+      "route_coordinates": {
+        "completed_route": [
+          {
+            "latitude": 13.0833,
+            "longitude": 100.8833
+          },
+          {
+            "latitude": 14.0,
+            "longitude": 95.0
+          },
+          {
+            "latitude": 16.0,
+            "longitude": 90.0
+          },
+          {
+            "latitude": 18.0,
+            "longitude": 85.0
+          },
+          {
+            "latitude": 20.0,
+            "longitude": 80.0
+          },
+          {
+            "latitude": 22.0,
+            "longitude": 75.0
+          },
+          {
+            "latitude": 23.5,
+            "longitude": 70.0
+          },
+          {
+            "latitude": 24.5,
+            "longitude": 68.0
+          },
+          {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        ],
+        "remaining_route": []
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": "2025-02-01T00:00:00+05:00",
+          "status": "completed",
+          "location": "LAEM CHABANG, THAILAND"
+        },
+        "arrival_at_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "departure_from_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "arrival_at_destination": {
+          "date": "2025-02-14T00:00:00+05:00",
+          "status": "completed",
+          "location": "KARACHI, PAKISTAN"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": "2025-02-14T00:00:00+05:00",
+        "transit_time": "13 days",
+        "sailing_status": "Discharged",
+        "live_tracking_link": "https://app.maalbardaar.com/tracking?query=BKKF19739400",
+        "last_updated": "2025-04-18T00:00:00+05:00"
+      }
+    },
+    {
+      "shipment_order_number": "MB20251207-0002",
+      "shipment_id": "bc23d1a1-d4c0-4f89-8589-82f7610d9ee2",
+      "shipment_status": "closed",
+      "route_info": {
+        "origin": {
+          "port_name": "PORT QASIM, PAKISTAN",
+          "port_code": "PKQCT",
+          "coordinates": {
+            "latitude": 24.7854,
+            "longitude": 67.348
+          }
+        },
+        "destination": {
+          "port_name": "NORFLOK, USA",
+          "port_code": "USORF",
+          "coordinates": {
+            "latitude": 36.8468,
+            "longitude": -76.2852
+          }
+        },
+        "transshipment_ports": [],
+        "route_type": "direct"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "MAERSK VIRGINIA",
+          "vessel_imo": "9123456",
+          "from_port": "PORT QASIM, PAKISTAN",
+          "to_port": "NORFLOK, USA",
+          "departure_date": "2025-01-09T00:00:00+05:00",
+          "arrival_date": "2025-02-23T00:00:00+05:00"
+        }
+      ],
+      "current_position": {
+        "latitude": 36.8468,
+        "longitude": -76.2852,
+        "location_name": "NORFLOK, USA",
+        "timestamp": "2025-02-23T00:00:00+05:00",
+        "vessel_name": null,
+        "vessel_imo": null,
+        "status": "Closed",
+        "current_leg": 1
+      },
+      "route_coordinates": {
+        "completed_route": [
+          {
+            "latitude": 24.7854,
+            "longitude": 67.348
+          },
+          {
+            "latitude": 26.0,
+            "longitude": 60.0
+          },
+          {
+            "latitude": 28.0,
+            "longitude": 50.0
+          },
+          {
+            "latitude": 30.0,
+            "longitude": 30.0
+          },
+          {
+            "latitude": 32.0,
+            "longitude": 10.0
+          },
+          {
+            "latitude": 34.0,
+            "longitude": -10.0
+          },
+          {
+            "latitude": 35.0,
+            "longitude": -30.0
+          },
+          {
+            "latitude": 36.0,
+            "longitude": -50.0
+          },
+          {
+            "latitude": 36.5,
+            "longitude": -65.0
+          },
+          {
+            "latitude": 36.7,
+            "longitude": -72.0
+          },
+          {
+            "latitude": 36.8468,
+            "longitude": -76.2852
+          }
+        ],
+        "remaining_route": []
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": "2025-01-09T00:00:00+05:00",
+          "status": "completed",
+          "location": "PORT QASIM, PAKISTAN"
+        },
+        "arrival_at_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "departure_from_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "arrival_at_destination": {
+          "date": "2025-02-23T00:00:00+05:00",
+          "status": "completed",
+          "location": "NORFLOK, USA"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": "2025-02-23T00:00:00+05:00",
+        "transit_time": "45 days",
+        "sailing_status": "Discharged",
+        "live_tracking_link": "https://app.maalbardaar.com/tracking?query=AKI0560100",
+        "last_updated": "2025-02-23T00:00:00+05:00"
+      }
+    },
+    {
+      "shipment_order_number": "MB20250321-0001",
+      "shipment_id": "fbad1693-2796-4218-93e7-6ac41a395c69",
+      "shipment_status": "delivered",
+      "route_info": {
+        "origin": {
+          "port_name": "SHANGHAI, CHINA",
+          "port_code": "CNSHA",
+          "coordinates": {
+            "latitude": 31.2304,
+            "longitude": 121.4737
+          }
+        },
+        "destination": {
+          "port_name": "KARACHI, PAKISTAN",
+          "port_code": "PKKHI",
+          "coordinates": {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        },
+        "transshipment_ports": [
+          {
+            "port_name": "SINGAPORE",
+            "port_code": "SGSIN",
+            "port_city": "Singapore",
+            "port_country": "Singapore",
+            "coordinates": {
+              "latitude": 1.2644,
+              "longitude": 103.8224
+            },
+            "arrival_date": "2025-02-05T00:00:00+05:00",
+            "departure_date": "2025-02-07T00:00:00+05:00",
+            "vessel_at_transshipment": "MSC MEDITERRANEAN",
+            "vessel_imo": "8765432"
+          }
+        ],
+        "route_type": "transshipment"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "COSCO SHIPPING TAURUS",
+          "vessel_imo": "7654321",
+          "from_port": "SHANGHAI, CHINA",
+          "to_port": "SINGAPORE",
+          "departure_date": "2025-01-25T00:00:00+05:00",
+          "arrival_date": "2025-02-05T00:00:00+05:00"
+        },
+        {
+          "leg": 2,
+          "vessel_name": "MSC MEDITERRANEAN",
+          "vessel_imo": "8765432",
+          "from_port": "SINGAPORE",
+          "to_port": "KARACHI, PAKISTAN",
+          "departure_date": "2025-02-07T00:00:00+05:00",
+          "arrival_date": "2025-02-18T00:00:00+05:00"
+        }
+      ],
+      "current_position": {
+        "latitude": 24.8414,
+        "longitude": 67.0011,
+        "location_name": "KARACHI, PAKISTAN",
+        "timestamp": "2025-02-18T00:00:00+05:00",
+        "vessel_name": null,
+        "vessel_imo": null,
+        "status": "Delivered",
+        "current_leg": 2
+      },
+      "route_coordinates": {
+        "completed_route": [
+          {
+            "latitude": 31.2304,
+            "longitude": 121.4737
+          },
+          {
+            "latitude": 28.0,
+            "longitude": 115.0
+          },
+          {
+            "latitude": 25.0,
+            "longitude": 110.0
+          },
+          {
+            "latitude": 20.0,
+            "longitude": 108.0
+          },
+          {
+            "latitude": 15.0,
+            "longitude": 106.0
+          },
+          {
+            "latitude": 10.0,
+            "longitude": 105.0
+          },
+          {
+            "latitude": 5.0,
+            "longitude": 104.0
+          },
+          {
+            "latitude": 1.2644,
+            "longitude": 103.8224
+          },
+          {
+            "latitude": 5.0,
+            "longitude": 100.0
+          },
+          {
+            "latitude": 10.0,
+            "longitude": 90.0
+          },
+          {
+            "latitude": 15.0,
+            "longitude": 80.0
+          },
+          {
+            "latitude": 20.0,
+            "longitude": 75.0
+          },
+          {
+            "latitude": 23.0,
+            "longitude": 70.0
+          },
+          {
+            "latitude": 24.5,
+            "longitude": 68.0
+          },
+          {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        ],
+        "remaining_route": []
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": "2025-01-25T00:00:00+05:00",
+          "status": "completed",
+          "location": "SHANGHAI, CHINA"
+        },
+        "arrival_at_transshipment": {
+          "date": "2025-02-05T00:00:00+05:00",
+          "status": "completed",
+          "location": "SINGAPORE"
+        },
+        "departure_from_transshipment": {
+          "date": "2025-02-07T00:00:00+05:00",
+          "status": "completed",
+          "location": "SINGAPORE"
+        },
+        "arrival_at_destination": {
+          "date": "2025-02-18T00:00:00+05:00",
+          "status": "completed",
+          "location": "KARACHI, PAKISTAN"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": "2025-02-18T00:00:00+05:00",
+        "transit_time": "24 days",
+        "sailing_status": "Discharged",
+        "live_tracking_link": "https://app.maalbardaar.com/tracking?query=EURFL25106677KHI",
+        "last_updated": "2025-02-18T00:00:00+05:00"
+      }
+    },
+    {
+      "shipment_order_number": "MB20250320-0004",
+      "shipment_id": "8714e15f-3a76-46dd-a393-e2a48e73d1df",
+      "shipment_status": "delivered",
+      "route_info": {
+        "origin": {
+          "port_name": "BUSAN, SOUTH KOREA",
+          "port_code": "KRPUS",
+          "coordinates": {
+            "latitude": 35.1796,
+            "longitude": 129.0756
+          }
+        },
+        "destination": {
+          "port_name": "KARACHI, PAKISTAN",
+          "port_code": "PKKHI",
+          "coordinates": {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        },
+        "transshipment_ports": [],
+        "route_type": "direct"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "HAPAG LLOYD BERLIN",
+          "vessel_imo": "6543210",
+          "from_port": "BUSAN, SOUTH KOREA",
+          "to_port": "KARACHI, PAKISTAN",
+          "departure_date": "2025-01-20T11:10:46+05:00",
+          "arrival_date": "2025-02-11T11:10:47+05:00"
+        }
+      ],
+      "current_position": {
+        "latitude": 24.8414,
+        "longitude": 67.0011,
+        "location_name": "KARACHI, PAKISTAN",
+        "timestamp": "2025-05-15T00:00:00+05:00",
+        "vessel_name": null,
+        "vessel_imo": null,
+        "status": "Delivered",
+        "current_leg": 1
+      },
+      "route_coordinates": {
+        "completed_route": [
+          {
+            "latitude": 35.1796,
+            "longitude": 129.0756
+          },
+          {
+            "latitude": 33.0,
+            "longitude": 125.0
+          },
+          {
+            "latitude": 30.0,
+            "longitude": 120.0
+          },
+          {
+            "latitude": 28.0,
+            "longitude": 110.0
+          },
+          {
+            "latitude": 26.0,
+            "longitude": 100.0
+          },
+          {
+            "latitude": 25.5,
+            "longitude": 90.0
+          },
+          {
+            "latitude": 25.0,
+            "longitude": 80.0
+          },
+          {
+            "latitude": 24.9,
+            "longitude": 70.0
+          },
+          {
+            "latitude": 24.8414,
+            "longitude": 67.0011
+          }
+        ],
+        "remaining_route": []
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": "2025-01-20T11:10:46+05:00",
+          "status": "completed",
+          "location": "BUSAN, SOUTH KOREA"
+        },
+        "arrival_at_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "departure_from_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "arrival_at_destination": {
+          "date": "2025-02-11T11:10:47+05:00",
+          "status": "completed",
+          "location": "KARACHI, PAKISTAN"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": "2025-02-11T11:10:47+05:00",
+        "transit_time": "22 days",
+        "sailing_status": "Discharged",
+        "live_tracking_link": "https://app.maalbardaar.com/tracking?query=FBKHI250004",
+        "last_updated": "2025-05-15T00:00:00+05:00"
+      }
+    },
+    {
+      "shipment_order_number": "MB20250115-0001",
+      "shipment_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "shipment_status": "in_transit",
+      "route_info": {
+        "origin": {
+          "port_name": "ROTTERDAM",
+          "port_code": "NLRTM",
+          "coordinates": {
+            "latitude": 51.9244,
+            "longitude": 4.4777
+          }
+        },
+        "destination": {
+          "port_name": "SHANGHAI, CHINA",
+          "port_code": "CNSHA",
+          "coordinates": {
+            "latitude": 31.2304,
+            "longitude": 121.4737
+          }
+        },
+        "transshipment_ports": [
+          {
+            "port_name": "SINGAPORE",
+            "port_code": "SGSIN",
+            "port_city": "Singapore",
+            "port_country": "Singapore",
+            "coordinates": {
+              "latitude": 1.2644,
+              "longitude": 103.8224
+            },
+            "arrival_date": "2025-12-15T00:00:00+05:00",
+            "departure_date": "2025-12-17T00:00:00+05:00",
+            "vessel_at_transshipment": "CMA CGM MARCO POLO",
+            "vessel_imo": "9456789"
+          }
+        ],
+        "route_type": "transshipment"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "MSC OSCAR",
+          "vessel_imo": "9123456",
+          "from_port": "ROTTERDAM",
+          "to_port": "SINGAPORE",
+          "departure_date": "2025-11-20T00:00:00+05:00",
+          "arrival_date": "2025-12-15T00:00:00+05:00"
+        },
+        {
+          "leg": 2,
+          "vessel_name": "CMA CGM MARCO POLO",
+          "vessel_imo": "9456789",
+          "from_port": "SINGAPORE",
+          "to_port": "SHANGHAI, CHINA",
+          "departure_date": "2025-12-17T00:00:00+05:00",
+          "arrival_date": "2025-12-25T00:00:00+05:00"
+        }
+      ],
+      "current_position": {
+        "latitude": 15.0,
+        "longitude": 110.0,
+        "location_name": "South China Sea",
+        "timestamp": "2025-12-18T12:00:00+05:00",
+        "vessel_name": "CMA CGM MARCO POLO",
+        "vessel_imo": "9456789",
+        "status": "In Transit",
+        "current_leg": 2
+      },
+      "route_coordinates": {
+        "completed_route": [
+          {
+            "latitude": 51.9244,
+            "longitude": 4.4777
+          },
+          {
+            "latitude": 50.0,
+            "longitude": 10.0
+          },
+          {
+            "latitude": 45.0,
+            "longitude": 20.0
+          },
+          {
+            "latitude": 40.0,
+            "longitude": 30.0
+          },
+          {
+            "latitude": 35.0,
+            "longitude": 40.0
+          },
+          {
+            "latitude": 30.0,
+            "longitude": 50.0
+          },
+          {
+            "latitude": 25.0,
+            "longitude": 60.0
+          },
+          {
+            "latitude": 20.0,
+            "longitude": 70.0
+          },
+          {
+            "latitude": 15.0,
+            "longitude": 80.0
+          },
+          {
+            "latitude": 10.0,
+            "longitude": 90.0
+          },
+          {
+            "latitude": 5.0,
+            "longitude": 100.0
+          },
+          {
+            "latitude": 1.2644,
+            "longitude": 103.8224
+          },
+          {
+            "latitude": 5.0,
+            "longitude": 108.0
+          },
+          {
+            "latitude": 10.0,
+            "longitude": 110.0
+          },
+          {
+            "latitude": 15.0,
+            "longitude": 110.0
+          }
+        ],
+        "remaining_route": [
+          {
+            "latitude": 15.0,
+            "longitude": 110.0
+          },
+          {
+            "latitude": 16.332218545454545,
+            "longitude": 109.83062854545454
+          },
+          {
+            "latitude": 16.951468,
+            "longitude": 112.045638
+          },
+          {
+            "latitude": 16.9609,
+            "longitude": 112.0495
+          },
+          {
+            "latitude": 21.7,
+            "longitude": 114.1
+          },
+          {
+            "latitude": 23,
+            "longitude": 117
+          },
+          {
+            "latitude": 23.765237,
+            "longitude": 118.103027
+          },
+          {
+            "latitude": 24.542126,
+            "longitude": 118.937988
+          },
+          {
+            "latitude": 25.085599,
+            "longitude": 119.761963
+          },
+          {
+            "latitude": 25.7,
+            "longitude": 120
+          },
+          {
+            "latitude": 27.8,
+            "longitude": 121.3
+          },
+          {
+            "latitude": 28.733947,
+            "longitude": 122.211914
+          },
+          {
+            "latitude": 30.181935,
+            "longitude": 122.875214
+          },
+          {
+            "latitude": 30.8345,
+            "longitude": 122.6776
+          },
+          {
+            "latitude": 30.732393,
+            "longitude": 121.827393
+          }
+        ]
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": "2025-11-20T00:00:00+05:00",
+          "status": "completed",
+          "location": "ROTTERDAM"
+        },
+        "arrival_at_transshipment": {
+          "date": "2025-12-15T00:00:00+05:00",
+          "status": "completed",
+          "location": "SINGAPORE"
+        },
+        "departure_from_transshipment": {
+          "date": "2025-12-17T00:00:00+05:00",
+          "status": "completed",
+          "location": "SINGAPORE"
+        },
+        "arrival_at_destination": {
+          "date": "2025-12-25T00:00:00+05:00",
+          "status": "pending",
+          "location": "SHANGHAI, CHINA"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": "2025-12-25T00:00:00+05:00",
+        "transit_time": "35 days",
+        "sailing_status": "Sailing",
+        "live_tracking_link": "https://app.maalbardaar.com/tracking?query=MB20250115-0001",
+        "last_updated": "2025-12-18T12:00:00+05:00"
+      }
+    },
+    {
+      "shipment_order_number": "MB20260110-TEST1",
+      "shipment_id": "seawaylogistics-sonmiani-karaginsky-test",
+      "shipment_status": "pending",
+      "route_info": {
+        "origin": {
+          "port_name": "SONMIANI, PAKISTAN (TEST)",
+          "port_code": "PKSON",
+          "coordinates": {
+            "latitude": 25.1987,
+            "longitude": 66.7438
+          }
+        },
+        "destination": {
+          "port_name": "KARAGINSKY DISTRICT, KAMCHATKA, RUSSIA (TEST)",
+          "port_code": "RUKGD",
+          "coordinates": {
+            "latitude": 58.6762,
+            "longitude": 163.75
+          }
+        },
+        "transshipment_ports": [],
+        "route_type": "direct"
+      },
+      "vessels": [
+        {
+          "leg": 1,
+          "vessel_name": "SEAWAYLOGISTICS SCIENCE",
+          "vessel_imo": null,
+          "from_port": "SONMIANI, PAKISTAN",
+          "to_port": "KARAGINSKY DISTRICT, KAMCHATKA, RUSSIA",
+          "departure_date": null,
+          "arrival_date": null
+        }
+      ],
+      "current_position": {
+        "latitude": 25.1987,
+        "longitude": 66.7438,
+        "location_name": "SONMIANI, PAKISTAN",
+        "timestamp": "2026-01-10T00:00:00+05:00",
+        "vessel_name": "SEAWAYLOGISTICS SCIENCE",
+        "vessel_imo": null,
+        "status": "Pending",
+        "current_leg": 1
+      },
+      "route_coordinates": {
+        "completed_route": [],
+        "remaining_route": [
+          {
+            "latitude": 24.817412,
+            "longitude": 66.975702
+          },
+          {
+            "latitude": 24.3,
+            "longitude": 66.6
+          },
+          {
+            "latitude": 22.543001,
+            "longitude": 68.719482
+          },
+          {
+            "latitude": 20.809334,
+            "longitude": 69.592463
+          },
+          {
+            "latitude": 20,
+            "longitude": 70
+          },
+          {
+            "latitude": 19,
+            "longitude": 72.4
+          },
+          {
+            "latitude": 15.3,
+            "longitude": 73
+          },
+          {
+            "latitude": 12.4,
+            "longitude": 74.3
+          },
+          {
+            "latitude": 9.7,
+            "longitude": 75.3
+          },
+          {
+            "latitude": 8,
+            "longitude": 77
+          },
+          {
+            "latitude": 5.8,
+            "longitude": 80.1
+          },
+          {
+            "latitude": 5.9,
+            "longitude": 81.9
+          },
+          {
+            "latitude": 6.1983,
+            "longitude": 85.9479
+          },
+          {
+            "latitude": 6.4664,
+            "longitude": 90
+          },
+          {
+            "latitude": 6.7,
+            "longitude": 94
+          },
+          {
+            "latitude": 7,
+            "longitude": 97
+          },
+          {
+            "latitude": 3.2,
+            "longitude": 100.6
+          },
+          {
+            "latitude": 2,
+            "longitude": 102
+          },
+          {
+            "latitude": 1.1,
+            "longitude": 103.6
+          },
+          {
+            "latitude": 1.341312,
+            "longitude": 104.482294
+          },
+          {
+            "latitude": 7.6091,
+            "longitude": 107.3207
+          },
+          {
+            "latitude": 12.2,
+            "longitude": 110.1
+          },
+          {
+            "latitude": 16.378371,
+            "longitude": 111.810965
+          },
+          {
+            "latitude": 16.951468,
+            "longitude": 112.045638
+          },
+          {
+            "latitude": 16.9609,
+            "longitude": 112.0495
+          },
+          {
+            "latitude": 21.7,
+            "longitude": 114.1
+          },
+          {
+            "latitude": 23,
+            "longitude": 117
+          },
+          {
+            "latitude": 23.765237,
+            "longitude": 118.103027
+          },
+          {
+            "latitude": 24.542126,
+            "longitude": 118.937988
+          },
+          {
+            "latitude": 25.085599,
+            "longitude": 119.761963
+          },
+          {
+            "latitude": 25.7,
+            "longitude": 120
+          },
+          {
+            "latitude": 27.8,
+            "longitude": 121.3
+          },
+          {
+            "latitude": 28.733947,
+            "longitude": 122.211914
+          },
+          {
+            "latitude": 30.181935,
+            "longitude": 122.875214
+          },
+          {
+            "latitude": 30.8345,
+            "longitude": 122.6776
+          },
+          {
+            "latitude": 31.3,
+            "longitude": 122.9
+          },
+          {
+            "latitude": 33.545754,
+            "longitude": 126.53967
+          },
+          {
+            "latitude": 34.2,
+            "longitude": 127.6
+          },
+          {
+            "latitude": 35,
+            "longitude": 129.2
+          },
+          {
+            "latitude": 36.4,
+            "longitude": 130
+          },
+          {
+            "latitude": 39.226838,
+            "longitude": 133.018934
+          },
+          {
+            "latitude": 40.8633,
+            "longitude": 134.7666
+          },
+          {
+            "latitude": 42.026685,
+            "longitude": 136.258596
+          },
+          {
+            "latitude": 45.1,
+            "longitude": 140.2
+          },
+          {
+            "latitude": 45.8,
+            "longitude": 142
+          },
+          {
+            "latitude": 47.306772,
+            "longitude": 145.972301
+          },
+          {
+            "latitude": 50.9395,
+            "longitude": 145.9478
+          },
+          {
+            "latitude": 54.005589,
+            "longitude": 147.90436
+          },
+          {
+            "latitude": 58.7,
+            "longitude": 150.9
+          },
+          {
+            "latitude": 58.1331,
+            "longitude": 155.5219
+          },
+          {
+            "latitude": 61.4359,
+            "longitude": 163.4886
+          }
+        ]
+      },
+      "milestones": {
+        "departure_from_origin": {
+          "date": null,
+          "status": "pending",
+          "location": "SONMIANI, PAKISTAN"
+        },
+        "arrival_at_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "departure_from_transshipment": {
+          "date": null,
+          "status": "not_applicable",
+          "location": null
+        },
+        "arrival_at_destination": {
+          "date": null,
+          "status": "pending",
+          "location": "KARAGINSKY DISTRICT, KAMCHATKA, RUSSIA"
+        }
+      },
+      "tracking_info": {
+        "estimated_arrival": null,
+        "transit_time": null,
+        "sailing_status": "Pending",
+        "live_tracking_link": null,
+        "last_updated": "2026-01-10T00:00:00+05:00"
+      }
+    }
+  ]
+}

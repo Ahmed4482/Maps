@@ -1,0 +1,421 @@
+{
+  "id": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+  "packages": [
+    {
+      "id": 2030,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "number_of_packages": "528.0000",
+      "package_type": "bales",
+      "erpnext_name": null
+    }
+  ],
+  "containers": [
+    {
+      "id": 2378,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "container_number": "GESU6138809",
+      "container_type": "40HC",
+      "seal_number": null,
+      "bl_gateout_date": null,
+      "bl_empty_date": null,
+      "erpnext_name": null
+    },
+    {
+      "id": 2379,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "container_number": "MEDU4588148",
+      "container_type": "40HC",
+      "seal_number": null,
+      "bl_gateout_date": null,
+      "bl_empty_date": null,
+      "erpnext_name": null
+    },
+    {
+      "id": 2380,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "container_number": "MEDU4986590",
+      "container_type": "40HC",
+      "seal_number": null,
+      "bl_gateout_date": null,
+      "bl_empty_date": null,
+      "erpnext_name": null
+    },
+    {
+      "id": 2381,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "container_number": "MEDU7827647",
+      "container_type": "40HC",
+      "seal_number": null,
+      "bl_gateout_date": null,
+      "bl_empty_date": null,
+      "erpnext_name": null
+    },
+    {
+      "id": 2382,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "container_number": "TGHU6133590",
+      "container_type": "40HC",
+      "seal_number": null,
+      "bl_gateout_date": null,
+      "bl_empty_date": null,
+      "erpnext_name": null
+    }
+  ],
+  "customs_clearance": [
+    {
+      "id": 2033,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "internal_ref_number": "S0536202526",
+      "goods_declaration_number": null,
+      "odoo_clearance_bill_number": null,
+      "clearance_bill_date": null,
+      "vessel_name": null,
+      "vessel_identification_number": null,
+      "terminal_location": null,
+      "igm_index_number": null,
+      "igm_eta": null,
+      "igm_etd": null,
+      "exchange_rate": null,
+      "financial_instrument_number": "AHB-IMP-099114-09092025",
+      "financial_instrument_expiry_date": "2026-02-26",
+      "freight_charges": "0.0000",
+      "insurance_charges": "1.0000",
+      "insurance_percentage_applied": true,
+      "landing_charges": "1.0000",
+      "landing_percentage_applied": true,
+      "excise_duty": null,
+      "collectorate": null,
+      "sync_with_erp": true,
+      "muccadam": null
+    }
+  ],
+  "items": [
+    {
+      "id": 888,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "commodity": 82,
+      "quantity": "117117.0000",
+      "quantity_statistical": null,
+      "unit_value": "1.5718",
+      "unit_value_invoice": null,
+      "erpnext_name": null
+    }
+  ],
+
+  "shipment_milestones": [
+    {
+      "id": 29752,
+      "display": {
+        "milestone_type_verbose": "Empty to shipper",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 0,
+      "status": null,
+      "location": "SANTOS, BRAZIL",
+      "vessel": null,
+      "vessel_imo": null,
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-10-09T00:00:00+05:00",
+      "is_automated": true,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 30500,
+      "display": {
+        "milestone_type_verbose": "Container arrival at first POL (Gate in)",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 4,
+      "status": null,
+      "location": "SANTOS, BRAZIL",
+      "vessel": null,
+      "vessel_imo": null,
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-10-21T00:00:00+05:00",
+      "is_automated": true,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 30501,
+      "display": {
+        "milestone_type_verbose": "Container loaded at first POL",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 5,
+      "status": null,
+      "location": "SANTOS, BRAZIL",
+      "vessel": "MSC KATRINA",
+      "vessel_imo": "9467445",
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-10-29T00:00:00+05:00",
+      "is_automated": true,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 29753,
+      "display": {
+        "milestone_type_verbose": "Departure from first POL",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 1,
+      "status": null,
+      "location": "SANTOS, BRAZIL",
+      "vessel": "MSC KATRINA",
+      "vessel_imo": "9467445",
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-10-29T00:00:00+05:00",
+      "is_automated": true,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 29860,
+      "display": {
+        "milestone_type_verbose": "Demand",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 53,
+      "status": "Quotation sent for Clearance Activities",
+      "location": null,
+      "vessel": null,
+      "vessel_imo": null,
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-11-14T09:59:52.960189+05:00",
+      "is_automated": false,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 32358,
+      "display": {
+        "milestone_type_verbose": "Shipping Documents",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 50,
+      "status": "For Duty and Other clearance activities received",
+      "location": null,
+      "vessel": null,
+      "vessel_imo": null,
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-12-03T09:20:36.135634+05:00",
+      "is_automated": false,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 30503,
+      "display": {
+        "milestone_type_verbose": "Vessel arrival at T/S port",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 6,
+      "status": null,
+      "location": "MUNDRA",
+      "vessel": null,
+      "vessel_imo": null,
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-12-08T00:00:00+05:00",
+      "is_automated": true,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 30504,
+      "display": {
+        "milestone_type_verbose": "Vessel departure from T/S",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 10,
+      "status": null,
+      "location": "MUNDRA",
+      "vessel": "MSC LONG BEACH VI",
+      "vessel_imo": "9327803",
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-12-10T00:00:00+05:00",
+      "is_automated": true,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 29754,
+      "display": {
+        "milestone_type_verbose": "Arrival at final POD",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 2,
+      "status": null,
+      "location": "MUHAMMAD BIN QASIM (PORT QASIM), PAKISTAN",
+      "vessel": null,
+      "vessel_imo": null,
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-12-11T00:00:00+05:00",
+      "is_automated": true,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 30502,
+      "display": {
+        "milestone_type_verbose": "Container discharge at final POD",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 11,
+      "status": null,
+      "location": "MUHAMMAD BIN QASIM (PORT QASIM), PAKISTAN",
+      "vessel": null,
+      "vessel_imo": null,
+      "longitude": null,
+      "latitude": null,
+      "start_date": "2025-12-11T00:00:00+05:00",
+      "is_automated": true,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    },
+    {
+      "id": 29755,
+      "display": {
+        "milestone_type_verbose": "Delivery to consignee",
+        "shipment_number": "MB20251113-0004",
+        "transporter_name": null
+      },
+      "milestone_type": 3,
+      "status": null,
+      "location": null,
+      "vessel": null,
+      "vessel_imo": null,
+      "longitude": null,
+      "latitude": null,
+      "start_date": null,
+      "is_automated": false,
+      "erpnext_name": null,
+      "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+      "transporter": null
+    }
+  ],
+
+  "shipsgo_tracking": {
+    "id": 1957,
+    "shipment": "0a2a7ac8-87f4-4599-a09c-697745878e90",
+    "is_automated_tracking": true,
+    "request_identifier": "5556479",
+    "live_map_link": "https://app.maalbardaar.com/tracking?query=GESU6138809",
+    "transit_time_formatted": "43 days",
+    "estimated_arrival": "2025-12-10",
+    "status_message": "Success",
+    "request_status": "40",
+    "sailing_status": "Sailing"
+  },
+
+  "shipment_order_number": "MB20251113-0004",
+  "item_description": "BRAZILIAN GINNED COTTON BCI, MIDDLING 1.1/8 3.5 5.2, NCL - GPT 28 MIN BCI CROP 2025",
+  "invoice_no": "23606",
+  "invoice_date": "2025-10-30",
+  "bank_document_number": "0001LC79589/2025",
+  "bank_document_number_date": "2025-09-12",
+  "consignment_mode": "FCL",
+  "master_bill_of_lading_number": "MEDUFX863329",
+  "master_bill_of_lading_date": "2025-10-30",
+  "house_bill_of_lading_number": null,
+  "house_bill_of_lading_date": null,
+  "shipping_line": "MSC",
+  "airline": null,
+  "container_number": "GESU6138809",
+  "gross_weight": "117909.0000",
+  "net_weight": "117117.0000",
+  "customer_ref_number": "0001LC79589/2025",
+  "qr_code": null,
+  "delivery_term": "CFR",
+  "mode_of_payment": "LC",
+  "origin_demurrage_days": 0,
+  "origin_demurrage_charges": null,
+  "origin_detention_days": 0,
+  "origin_detention_charges": null,
+  "destination_demurrage_days": 0,
+  "destination_demurrage_charges": null,
+  "destination_detention_days": 0,
+  "destination_detention_charges": null,
+  "status": "in_transit",
+  "status_updated_at": "2025-11-19T08:51:37.175344+05:00",
+  "created_at": "2025-11-13T10:54:27.759609+05:00",
+  "updated_at": "2025-11-13T10:54:27.759627+05:00",
+  "master_bill_of_lading_shipping_agent": {
+    "id": "19f715a7-0922-48ad-af49-cfcaa975c36b",
+    "name": "MSC Agency Pakistan Pvt Ltd",
+    "tax_id": "76",
+    "type": [],
+    "is_verified": true
+  },
+  "house_bill_of_lading_shipping_agent": null,
+  "shipper_name": {
+    "id": "0c43eca0-6c6c-48ec-a7ad-adba0546931c",
+    "name": "StoneX Switzerland SA",
+    "tax_id": "",
+    "type": [],
+    "is_verified": true
+  },
+  "beneficiary_name": {
+    "id": "0c43eca0-6c6c-48ec-a7ad-adba0546931c",
+    "name": "StoneX Switzerland SA",
+    "tax_id": "",
+    "type": [],
+    "is_verified": true
+  },
+  "consignee_name": {
+    "id": "299fea45-b8de-4df6-85f3-02dd7efd1ca1",
+    "name": "Reliance Weaving Mills Limited",
+    "tax_id": "814",
+    "type": [],
+    "is_verified": true
+  },
+  "route": 71,
+  "origin_terminal": null,
+  "destination_terminal": null,
+  "partner": [
+    {
+      "id": "97b5f6d8-e983-4aeb-b924-354187003b19",
+      "name": "Kings International Forwarding Agency",
+      "tax_id": null,
+      "type": [],
+      "is_verified": true
+    },
+    {
+      "id": "299fea45-b8de-4df6-85f3-02dd7efd1ca1",
+      "name": "Reliance Weaving Mills Limited",
+      "tax_id": "814",
+      "type": [],
+      "is_verified": true
+    }
+  ]
+}
