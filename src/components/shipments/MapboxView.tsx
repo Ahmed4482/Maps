@@ -67,7 +67,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
   // Initialize Mapbox map
   useEffect(() => {
     if (!mapContainerRef.current) return;
-    
+
     const mapboxToken = import.meta.env.VITE_MAPBOX_KEY;
     if (!mapboxToken) {
       setMapError('Mapbox token not configured');
@@ -75,6 +75,102 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
     }
 
     mapboxgl.accessToken = mapboxToken;
+
+    // Style Mapbox popup close button
+    let styleElement = document.getElementById('mapbox-popup-close-style');
+    if (!styleElement) {
+      styleElement = document.createElement('style');
+      styleElement.id = 'mapbox-popup-close-style';
+      styleElement.textContent = `
+        .mapboxgl-popup-close-button {
+          width: 28px !important;
+          height: 28px !important;
+          font-size: 20px !important;
+          color: white !important;
+          background: rgba(255,255,255,0.2) !important;
+          border-radius: 8px !important;
+          top: 12px !important;
+          right: 12px !important;
+          padding: 0 !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          transition: all 0.2s !important;
+          line-height: 1 !important;
+          font-weight: bold !important;
+        }
+        .mapboxgl-popup-close-button:hover {
+          background: rgba(255,255,255,0.3) !important;
+        }
+        .mapboxgl-popup-close-button:focus {
+          outline: none !important;
+        }
+        /* Hide Mapbox popup tip/pointer (the square box behind popup) */
+        .mapboxgl-popup-tip {
+          display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
+          width: 0 !important;
+          height: 0 !important;
+          border: none !important;
+        }
+        .mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-left .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-right .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+        .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+          display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
+          width: 0 !important;
+          height: 0 !important;
+          border: none !important;
+        }
+        /* Remove default Mapbox popup content background and wrapper */
+        .mapboxgl-popup-content {
+          background: transparent !important;
+          box-shadow: none !important;
+          padding: 0 !important;
+          border: none !important;
+        }
+        .mapboxgl-popup {
+          pointer-events: none !important;
+          background: transparent !important;
+          z-index: 50 !important;
+        }
+        .mapboxgl-popup-content {
+          pointer-events: auto !important;
+        }
+        /* Hide any background elements */
+        .mapboxgl-popup-content-wrapper {
+          background: transparent !important;
+          box-shadow: none !important;
+          padding: 0 !important;
+          border: none !important;
+        }
+        /* Ensure no background on popup container and all wrapper elements */
+        .mapboxgl-popup-container {
+          background: transparent !important;
+        }
+        /* Target all possible popup background elements - remove any white/colored backgrounds */
+        .mapboxgl-popup > div {
+          background: transparent !important;
+        }
+        .mapboxgl-popup-content-wrapper {
+          background: transparent !important;
+          box-shadow: none !important;
+        }
+        /* Remove any default Mapbox styling that creates rectangles */
+        .mapboxgl-popup-content-wrapper::before,
+        .mapboxgl-popup-content-wrapper::after {
+          display: none !important;
+        }
+      `;
+      document.head.appendChild(styleElement);
+    }
 
     try {
       const styleMap: Record<'streets' | 'satellite' | 'satellite-streets' | 'outdoors', string> = {
@@ -93,6 +189,19 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
 
       mapRef.current.on('error', () => {
         setMapError('Failed to load Mapbox. Please check your connection.');
+      });
+
+      // Close popups when clicking on the map
+      mapRef.current.on('click', (e) => {
+        // Only close if clicking directly on map (not on popup or marker)
+        const target = e.originalEvent.target as HTMLElement;
+        if (target && !target.closest('.mapboxgl-popup') && !target.closest('.mapboxgl-marker')) {
+          popupsRef.current.forEach((popup) => {
+            if (popup && popup.isOpen()) {
+              popup.remove();
+            }
+          });
+        }
       });
     } catch (err) {
       setMapError('Mapbox initialization error');
@@ -134,22 +243,22 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
 
     // Try to get tracking data first (new structure)
     const trackingData = getShipmentTrackingForMap(activeShipment);
-    
+
     let completedPoints: Array<[number, number]> = [];
     let upcomingPoints: Array<[number, number]> = [];
-    
+
     if (trackingData) {
       // Use new tracking data structure
       completedPoints = trackingData.completedRoute.map((p) => [p.lng, p.lat] as [number, number]);
-      
+
       // Build upcoming route: from vessel position through remaining route to destination
       upcomingPoints = [];
-      
+
       // Start from vessel position (closest sea waypoint)
       if (trackingData.currentPosition) {
         upcomingPoints.push([trackingData.currentPosition.lng, trackingData.currentPosition.lat] as [number, number]);
       }
-      
+
       // Add all remaining route points
       trackingData.remainingRoute.forEach((point) => {
         // Avoid duplicate if first point is same as vessel position
@@ -158,7 +267,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
           if (lastPoint) {
             const isDuplicate = Math.abs(lastPoint[0] - point.lng) < 0.0001 &&
               Math.abs(lastPoint[1] - point.lat) < 0.0001;
-            
+
             if (!isDuplicate) {
               upcomingPoints.push([point.lng, point.lat] as [number, number]);
             }
@@ -167,23 +276,23 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
           upcomingPoints.push([point.lng, point.lat] as [number, number]);
         }
       });
-      
+
       // Ensure it ends at destination port
       if (trackingData.ports.destination && upcomingPoints.length > 0) {
         const lastPoint = upcomingPoints[upcomingPoints.length - 1];
         if (lastPoint) {
           const destinationPoint: [number, number] = [trackingData.ports.destination.lng, trackingData.ports.destination.lat];
-          
+
           // Only add destination if it's not already the last point
           const isLastPoint = Math.abs(lastPoint[0] - destinationPoint[0]) < 0.0001 &&
             Math.abs(lastPoint[1] - destinationPoint[1]) < 0.0001;
-          
+
           if (!isLastPoint) {
             upcomingPoints.push(destinationPoint);
           }
         }
       }
-      
+
       // Fallback: if no remaining route but vessel and destination exist, draw line between them
       if (upcomingPoints.length === 1 && trackingData.ports.destination) {
         upcomingPoints.push([trackingData.ports.destination.lng, trackingData.ports.destination.lat] as [number, number]);
@@ -224,21 +333,21 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
     // Draw line from vessel to origin if vessel is at origin (on sea, not at port yet)
     if (trackingData) {
       const isAtOrigin = trackingData.completedRoute.length === 0;
-      
+
       if (isAtOrigin && trackingData.currentPosition && trackingData.ports.origin) {
         // Vessel is at origin (on sea), draw line from vessel to origin port
         const vesselToOriginPath: Array<[number, number]> = [
           [trackingData.currentPosition.lng, trackingData.currentPosition.lat],
           [trackingData.ports.origin.lng, trackingData.ports.origin.lat],
         ];
-        
+
         // Calculate distance to determine if origin is reached
         const distance = Math.sqrt(
           Math.pow(trackingData.currentPosition.lat - trackingData.ports.origin.lat, 2) +
           Math.pow(trackingData.currentPosition.lng - trackingData.ports.origin.lng, 2)
         );
         const originReached = distance < 0.01; // Very close to origin (approximately 1km)
-        
+
         mapRef.current?.addSource('vessel-to-origin', {
           type: 'geojson',
           data: {
@@ -369,7 +478,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
 
       const el = document.createElement('div');
       el.className = 'marker';
-      
+
       if (isVessel) {
         // Cargo ship image for vessel with transparent white background
         el.style.width = isCurrent ? '40px' : '32px';
@@ -380,7 +489,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
         el.style.display = 'block';
         el.style.position = 'relative';
         el.style.overflow = 'hidden';
-        
+
         // Create img element to process white background
         const img = document.createElement('img');
         img.crossOrigin = 'anonymous';
@@ -397,7 +506,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
               context.drawImage(img, 0, 0);
               const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
               const data = imageData.data;
-              
+
               // Make white pixels transparent
               for (let index = 0; index < data.length; index += 4) {
                 const r = data[index];
@@ -408,7 +517,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
                   data[index + 3] = 0; // Set alpha to 0 (transparent)
                 }
               }
-              
+
               context.putImageData(imageData, 0, 0);
               const transparentImageUrl = canvas.toDataURL('image/png');
               img.src = transparentImageUrl;
@@ -451,22 +560,96 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
         el.textContent = label;
       }
 
+      // Determine header color and icon based on marker type
+      let headerColor = '#0A5C3A';
+      let headerGradient = 'linear-gradient(135deg, #0A5C3A 0%, #0d7a4d 100%)';
+      let icon = '📍';
+      let headerTitle = title;
+      let headerSubtitle = '';
+
+      if (isVessel) {
+        headerColor = '#3b82f6';
+        headerGradient = 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)';
+        icon = '🚢';
+        headerTitle = 'Current Position';
+        headerSubtitle = 'Vessel Location';
+      } else if (isTransshipment) {
+        headerColor = '#f59e0b';
+        headerGradient = 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)';
+        icon = '🔄';
+        headerTitle = 'Transshipment Port';
+        headerSubtitle = 'Intermediate Stop';
+      } else if (isOrigin) {
+        headerTitle = 'Origin Port';
+        headerSubtitle = 'Starting Point';
+      } else if (isDestination) {
+        headerTitle = 'Destination Port';
+        headerSubtitle = 'Final Destination';
+      }
+
       let popupContent = `
-        <div style="padding: 12px; font-family: sans-serif; max-width: 360px;">
-          <div style="font-weight: bold; color: #0A5C3A; margin-bottom: 8px; font-size: 14px;">${title}</div>
+        <div style="
+          width: 360px; 
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%);
+          backdrop-filter: blur(20px);
+          border-radius: 16px;
+          box-shadow: 0 20px 60px rgba(${isVessel ? '59, 130, 246' : isTransshipment ? '245, 158, 11' : '10, 92, 58'}, 0.3), 0 0 0 1px rgba(${isVessel ? '59, 130, 246' : isTransshipment ? '245, 158, 11' : '10, 92, 58'}, 0.1);
+          overflow: hidden;
+          position: relative;
+        ">
+          <div style="
+            background: ${headerGradient};
+            padding: 16px 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+          ">
+            <div style="
+              width: 40px;
+              height: 40px;
+              background: rgba(255,255,255,0.2);
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 20px;
+            ">${icon}</div>
+            <div style="flex: 1;">
+              <div style="font-weight: 700; font-size: 16px; letter-spacing: 0.3px;">${headerTitle}</div>
+              ${headerSubtitle ? `<div style="font-size: 11px; opacity: 0.9; margin-top: 2px;">${headerSubtitle}</div>` : ''}
+            </div>
+          </div>
+          <div style="padding: 20px;">
       `;
-      
+
       if (isVessel && trackingData?.currentPosition) {
         popupContent += `
-          <div style="margin-bottom: 8px;">
-            <img src="/CargoShip.png" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px;" alt="Cargo Ship" />
+          <div style="margin-bottom: 16px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <img src="/CargoShip.png" style="width: 100%; height: 200px; object-fit: cover; display: block;" alt="Cargo Ship" />
           </div>
-          <div style="font-size: 12px; color: #666; margin-bottom: 4px;">
-            <strong>Vessel:</strong> ${trackingData.currentPosition.vesselName || 'N/A'}<br/>
-            <strong>IMO:</strong> ${trackingData.currentPosition.vesselImo || 'N/A'}<br/>
-            <strong>Location:</strong> ${trackingData.currentPosition.locationName}<br/>
-            <strong>Status:</strong> ${trackingData.currentPosition.status}<br/>
-            <strong>Last Updated:</strong> ${new Date(trackingData.currentPosition.timestamp).toLocaleString()}
+          <div style="
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(59, 130, 246, 0.02) 100%);
+            border-left: 3px solid #3b82f6;
+            padding: 14px 16px;
+            border-radius: 8px;
+          ">
+            <div style="font-size: 12px; color: #666; line-height: 1.8;">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <span style="color: #3b82f6; font-weight: 600; min-width: 110px;">Vessel:</span>
+                <span style="font-weight: 500;">${trackingData.currentPosition.vesselName || 'N/A'}</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                <span style="color: #3b82f6; font-weight: 600; min-width: 110px;">IMO:</span>
+                <span style="font-family: 'Courier New', monospace; font-weight: 500;">${trackingData.currentPosition.vesselImo || 'N/A'}</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="color: #3b82f6; font-weight: 600; min-width: 110px;">Last Updated:</span>
+                <span style="font-weight: 500;">${new Date(trackingData.currentPosition.timestamp).toLocaleString()}</span>
+              </div>
+            </div>
           </div>
         `;
       } else if (isTransshipment && trackingData) {
@@ -475,30 +658,124 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
         const transshipmentPort = trackingData.ports.transshipment[transshipmentIndex];
         if (transshipmentPort) {
           popupContent += `
-            <div id="transshipment-city-photo-${idx}" style="margin-bottom: 8px; display: none;">
-              <img id="transshipment-city-photo-img-${idx}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px;" alt="City photo" />
+            <div id="transshipment-city-photo-${idx}" style="margin-bottom: 16px; display: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+              <img id="transshipment-city-photo-img-${idx}" style="width: 100%; height: 200px; object-fit: cover; display: block;" alt="City photo" />
             </div>
-            <div style="font-size: 12px; color: #666; margin-bottom: 4px;">
-              <strong>Port:</strong> ${transshipmentPort.name}<br/>
-              <strong>Arrival:</strong> ${new Date(transshipmentPort.arrivalDate).toLocaleDateString()}<br/>
-              <strong>Departure:</strong> ${new Date(transshipmentPort.departureDate).toLocaleDateString()}
+            <div style="
+              background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(245, 158, 11, 0.02) 100%);
+              border-left: 3px solid #f59e0b;
+              padding: 14px 16px;
+              border-radius: 8px;
+              margin-bottom: 12px;
+            ">
+              <div style="font-size: 18px; color: #f59e0b; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.2px;">${transshipmentPort.name}</div>
+              <div style="font-size: 12px; color: #666; line-height: 1.8;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <span style="color: #f59e0b; font-weight: 600; min-width: 90px;">Port Code:</span>
+                  <span>${transshipmentPort.code || 'N/A'}</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <span style="color: #f59e0b; font-weight: 600; min-width: 90px;">Location:</span>
+                  <span>${transshipmentPort.city || ''}${transshipmentPort.city && transshipmentPort.country ? ', ' : ''}${transshipmentPort.country || ''}</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <span style="color: #f59e0b; font-weight: 600; min-width: 90px;">Arrival:</span>
+                  <span>${new Date(transshipmentPort.arrivalDate).toLocaleDateString()}</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #f59e0b; font-weight: 600; min-width: 90px;">Departure:</span>
+                  <span>${new Date(transshipmentPort.departureDate).toLocaleDateString()}</span>
+                </div>
+              </div>
             </div>
           `;
         }
       } else {
         popupContent += `
-          <div id="city-photo-${idx}" style="margin-bottom: 8px; display: none;">
-            <img id="city-photo-img-${idx}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px;" alt="City photo" />
+          <div id="city-photo-${idx}" style="margin-bottom: 16px; display: none; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+            <img id="city-photo-img-${idx}" style="width: 100%; height: 200px; object-fit: cover; display: block;" alt="City photo" />
           </div>
-          ${isOrigin ? `<div style="font-size: 12px; color: #666; margin-bottom: 4px;">${trackingData?.ports.origin?.name || activeShipment.origin}</div>` : ''}
-          ${isDestination ? `<div style="font-size: 12px; color: #666; margin-bottom: 4px;">${trackingData?.ports.destination?.name || activeShipment.destination}</div>` : ''}
+          <div style="
+            background: linear-gradient(135deg, rgba(10, 92, 58, 0.05) 0%, rgba(10, 92, 58, 0.02) 100%);
+            border-left: 3px solid #0A5C3A;
+            padding: 14px 16px;
+            border-radius: 8px;
+          ">
+            <div style="font-size: 18px; color: #0A5C3A; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.2px;">
+              ${isOrigin ? (trackingData?.ports.origin?.name || activeShipment.origin) : ''}
+              ${isDestination ? (trackingData?.ports.destination?.name || activeShipment.destination) : ''}
+            </div>
+            ${isOrigin && trackingData?.ports.origin ? `
+              <div style="font-size: 12px; color: #666; line-height: 1.8;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Port Code:</span>
+                  <span>${trackingData.ports.origin.code || 'N/A'}</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Country:</span>
+                  <span>${trackingData.ports.origin.name.split(',').pop()?.trim() || 'N/A'}</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Region:</span>
+                  <span>${trackingData.ports.origin.name.split(',').length > 1 ? trackingData.ports.origin.name.split(',').slice(0, -1).join(',').trim() : 'N/A'}</span>
+                </div>
+              </div>
+            ` : ''}
+            ${isDestination && trackingData?.ports.destination ? `
+              <div style="font-size: 12px; color: #666; line-height: 1.8;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Port Code:</span>
+                  <span>${trackingData.ports.destination.code || 'N/A'}</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Country:</span>
+                  <span>${trackingData.ports.destination.name.split(',').pop()?.trim() || 'N/A'}</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Region:</span>
+                  <span>${trackingData.ports.destination.name.split(',').length > 1 ? trackingData.ports.destination.name.split(',').slice(0, -1).join(',').trim() : 'N/A'}</span>
+                </div>
+              </div>
+            ` : ''}
+          </div>
         `;
       }
-      
-      popupContent += `</div>`;
-      
-      const popup = new mapboxgl.Popup({ offset: 25 })
+
+      popupContent += `
+          </div>
+        </div>
+      `;
+
+      const popup = new mapboxgl.Popup({
+        offset: { bottom: [0, -25] },
+        maxWidth: '360px',
+        className: 'custom-popup',
+        closeButton: true,
+        closeOnClick: false,
+        anchor: 'bottom'
+      })
         .setHTML(popupContent);
+
+      // Remove tip/pointer when popup opens
+      popup.on('open', () => {
+        setTimeout(() => {
+          const popupElement = popup.getElement();
+          if (popupElement) {
+            const tip = popupElement.querySelector('.mapboxgl-popup-tip');
+            if (tip) {
+              (tip as HTMLElement).style.display = 'none';
+              (tip as HTMLElement).style.visibility = 'hidden';
+              (tip as HTMLElement).style.opacity = '0';
+            }
+            // Also remove any background from wrapper
+            const wrapper = popupElement.querySelector('.mapboxgl-popup-content-wrapper');
+            if (wrapper) {
+              (wrapper as HTMLElement).style.background = 'transparent';
+              (wrapper as HTMLElement).style.boxShadow = 'none';
+            }
+          }
+        }, 10);
+      });
 
       const marker = new mapboxgl.Marker({ element: el })
         .setLngLat(point)
@@ -508,13 +785,36 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
       markersRef.current.push(marker);
       popupsRef.current.push(popup);
 
-      el.addEventListener('click', () => {
-        mapRef.current?.flyTo({
-          center: point,
-          zoom: 6,
-          duration: 1000,
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Close all other popups first
+        popupsRef.current.forEach(p => {
+          if (p !== popup && p.isOpen()) {
+            p.remove();
+          }
         });
-        popup.addTo(mapRef.current!);
+        // Open popup first
+        if (!popup.isOpen()) {
+          popup.addTo(mapRef.current!);
+        }
+        // Center map with offset to account for popup, so popup appears in center of screen
+        setTimeout(() => {
+          if (mapRef.current) {
+            // Calculate offset to center popup on screen
+            const mapContainer = mapRef.current.getContainer();
+            const mapHeight = mapContainer.clientHeight;
+            // Offset point downward to center popup (popup is above marker, so move marker up)
+            // This will make popup appear in center of screen
+            const offsetY = mapHeight * 0.2; // Move marker up so popup appears centered
+
+            mapRef.current.flyTo({
+              center: [point[0], point[1]],
+              zoom: 6,
+              duration: 1000,
+              offset: [0, offsetY] // Positive offset moves marker down, making popup appear higher (centered)
+            });
+          }
+        }, 100);
 
         // Fetch and display city photo for origin and destination
         if (isOrigin || isDestination) {
@@ -534,7 +834,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
             console.error('Error fetching city photo:', error);
           });
         }
-        
+
         // Fetch and display city photo for transshipment ports
         if (isTransshipment && trackingData) {
           // Calculate transshipment index: origin is at idx 0, so transshipment ports start at idx 1
@@ -542,10 +842,10 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
           const transshipmentPort = trackingData.ports.transshipment[transshipmentIndex];
           if (transshipmentPort) {
             // Use city, country format for better photo results
-            const locationName = transshipmentPort.city && transshipmentPort.country 
-              ? `${transshipmentPort.city}, ${transshipmentPort.country}` 
+            const locationName = transshipmentPort.city && transshipmentPort.country
+              ? `${transshipmentPort.city}, ${transshipmentPort.country}`
               : transshipmentPort.city || transshipmentPort.country || transshipmentPort.name;
-            
+
             getCityPhoto(locationName).then((photo) => {
               if (photo) {
                 const photoContainer = document.getElementById(`transshipment-city-photo-${idx}`);
@@ -769,7 +1069,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
         )}
         <div ref={mapContainerRef} className="relative h-full w-full">
           {/* Controls container - horizontal layout so buttons sit side-by-side */}
-          <div className="pointer-events-none absolute right-4 top-4 z-[9999] flex gap-2">
+          <div className="pointer-events-none absolute right-4 top-4 z-40 flex gap-2">
             {/* Map Layers Button - Always visible, including in fullscreen */}
             <button
               className="pointer-events-auto flex items-center justify-center h-10 w-10 rounded-full bg-white border-2 border-[#0A5C3A]/20 shadow-lg hover:border-[#0A5C3A]/40 hover:shadow-xl transition-all group"
@@ -804,7 +1104,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
         </div>
 
         {/* Current Location Button - Bottom Right */}
-        <div className="pointer-events-none absolute right-4 bottom-4 z-[9999]">
+        <div className="pointer-events-none absolute right-4 bottom-4 z-40">
           <button
             className="pointer-events-auto flex items-center justify-center h-10 w-10 rounded-full bg-white border-2 border-[#0A5C3A]/20 shadow-lg hover:border-[#0A5C3A]/40 hover:shadow-xl transition-all group disabled:opacity-50 disabled:cursor-not-allowed"
             title="Show my location"
@@ -1034,7 +1334,7 @@ export function MapboxView({ shipments, selectedShipmentId, onSelect }: MapboxVi
               >
                 Prev
               </button>
-              
+
               <div className="flex items-center gap-1">
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                   <button
