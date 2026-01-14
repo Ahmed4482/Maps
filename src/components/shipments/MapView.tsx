@@ -499,18 +499,18 @@ export function MapView({ shipments, selectedShipmentId, onSelect }: MapViewProp
                   margin-bottom: 16px;
                 ">
                   <div style="font-size: 18px; color: #0A5C3A; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.2px;">${trackingData.ports.origin.name}</div>
-                  <div style="font-size: 12px; color: #666; line-height: 1.8;">
+                  <div style="font-size: 12px; color: #000; line-height: 1.8;">
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Port Code:</span>
-                      <span>${trackingData.ports.origin.code || 'N/A'}</span>
+                      <span style="color: #0A5C3A; font-weight: 700; min-width: 90px;">Port Code:</span>
+                      <span style="font-weight: 600;">${trackingData.ports.origin.code || 'N/A'}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Country:</span>
-                      <span>${trackingData.ports.origin.name.split(',').pop()?.trim() || 'N/A'}</span>
+                      <span style="color: #0A5C3A; font-weight: 700; min-width: 90px;">Country:</span>
+                      <span style="font-weight: 600;">${trackingData.ports.origin.name.split(',').pop()?.trim() || 'N/A'}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px;">
-                      <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Region:</span>
-                      <span>${trackingData.ports.origin.name.split(',').length > 1 ? trackingData.ports.origin.name.split(',').slice(0, -1).join(',').trim() : 'N/A'}</span>
+                      <span style="color: #0A5C3A; font-weight: 700; min-width: 90px;">Region:</span>
+                      <span style="font-weight: 600;">${trackingData.ports.origin.name.split(',').length > 1 ? trackingData.ports.origin.name.split(',').slice(0, -1).join(',').trim() : 'N/A'}</span>
                     </div>
                   </div>
                 </div>
@@ -636,18 +636,18 @@ export function MapView({ shipments, selectedShipmentId, onSelect }: MapViewProp
                   margin-bottom: 16px;
                 ">
                   <div style="font-size: 18px; color: #0A5C3A; font-weight: 700; margin-bottom: 8px; letter-spacing: 0.2px;">${trackingData.ports.destination.name}</div>
-                  <div style="font-size: 12px; color: #666; line-height: 1.8;">
+                  <div style="font-size: 12px; color: #000; line-height: 1.8;">
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Port Code:</span>
-                      <span>${trackingData.ports.destination.code || 'N/A'}</span>
+                      <span style="color: #0A5C3A; font-weight: 700; min-width: 90px;">Port Code:</span>
+                      <span style="font-weight: 600;">${trackingData.ports.destination.code || 'N/A'}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Country:</span>
-                      <span>${trackingData.ports.destination.name.split(',').pop()?.trim() || 'N/A'}</span>
+                      <span style="color: #0A5C3A; font-weight: 700; min-width: 90px;">Country:</span>
+                      <span style="font-weight: 600;">${trackingData.ports.destination.name.split(',').pop()?.trim() || 'N/A'}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px;">
-                      <span style="color: #0A5C3A; font-weight: 600; min-width: 90px;">Region:</span>
-                      <span>${trackingData.ports.destination.name.split(',').length > 1 ? trackingData.ports.destination.name.split(',').slice(0, -1).join(',').trim() : 'N/A'}</span>
+                      <span style="color: #0A5C3A; font-weight: 700; min-width: 90px;">Region:</span>
+                      <span style="font-weight: 600;">${trackingData.ports.destination.name.split(',').length > 1 ? trackingData.ports.destination.name.split(',').slice(0, -1).join(',').trim() : 'N/A'}</span>
                     </div>
                   </div>
                 </div>
@@ -773,22 +773,22 @@ export function MapView({ shipments, selectedShipmentId, onSelect }: MapViewProp
                   margin-bottom: 12px;
                 ">
                   <div style="font-size: 18px; color: #f59e0b; font-weight: 700; margin-bottom: 12px; letter-spacing: 0.2px;">${port.name}</div>
-                  <div style="font-size: 12px; color: #666; line-height: 1.8;">
+                  <div style="font-size: 12px; color: #000; line-height: 1.8;">
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <span style="color: #f59e0b; font-weight: 600; min-width: 90px;">Port Code:</span>
-                      <span>${port.code || 'N/A'}</span>
+                      <span style="color: #f59e0b; font-weight: 700; min-width: 90px;">Port Code:</span>
+                      <span style="font-weight: 600;">${port.code || 'N/A'}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <span style="color: #f59e0b; font-weight: 600; min-width: 90px;">Location:</span>
-                      <span>${port.city || ''}${port.city && port.country ? ', ' : ''}${port.country || ''}</span>
+                      <span style="color: #f59e0b; font-weight: 700; min-width: 90px;">Location:</span>
+                      <span style="font-weight: 600;">${port.city || ''}${port.city && port.country ? ', ' : ''}${port.country || ''}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                      <span style="color: #f59e0b; font-weight: 600; min-width: 90px;">Arrival:</span>
-                      <span>${new Date(port.arrivalDate).toLocaleDateString()}</span>
+                      <span style="color: #f59e0b; font-weight: 700; min-width: 90px;">Arrival:</span>
+                      <span style="font-weight: 600;">${new Date(port.arrivalDate).toLocaleDateString()}</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 8px;">
-                      <span style="color: #f59e0b; font-weight: 600; min-width: 90px;">Departure:</span>
-                      <span>${new Date(port.departureDate).toLocaleDateString()}</span>
+                      <span style="color: #f59e0b; font-weight: 700; min-width: 90px;">Departure:</span>
+                      <span style="font-weight: 600;">${new Date(port.departureDate).toLocaleDateString()}</span>
                     </div>
                   </div>
                 </div>
@@ -938,18 +938,18 @@ export function MapView({ shipments, selectedShipmentId, onSelect }: MapViewProp
                       padding: 14px 16px;
                       border-radius: 8px;
                     ">
-                      <div style="font-size: 12px; color: #666; line-height: 1.8;">
+                      <div style="font-size: 12px; color: #000; line-height: 1.8;">
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                          <span style="color: #3b82f6; font-weight: 600; min-width: 110px;">Vessel:</span>
-                          <span style="font-weight: 500;">${trackingData.currentPosition.vesselName || 'N/A'}</span>
+                          <span style="color: #3b82f6; font-weight: 700; min-width: 110px;">Vessel:</span>
+                          <span style="font-weight: 600;">${trackingData.currentPosition.vesselName || 'N/A'}</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                          <span style="color: #3b82f6; font-weight: 600; min-width: 110px;">IMO:</span>
-                          <span style="font-family: 'Courier New', monospace; font-weight: 500;">${trackingData.currentPosition.vesselImo || 'N/A'}</span>
+                          <span style="color: #3b82f6; font-weight: 700; min-width: 110px;">IMO:</span>
+                          <span style="font-family: 'Courier New', monospace; font-weight: 600;">${trackingData.currentPosition.vesselImo || 'N/A'}</span>
                         </div>
                         <div style="display: flex; align-items: center; gap: 8px;">
-                          <span style="color: #3b82f6; font-weight: 600; min-width: 110px;">Last Updated:</span>
-                          <span style="font-weight: 500;">${new Date(trackingData.currentPosition.timestamp).toLocaleString()}</span>
+                          <span style="color: #3b82f6; font-weight: 700; min-width: 110px;">Last Updated:</span>
+                          <span style="font-weight: 600;">${new Date(trackingData.currentPosition.timestamp).toLocaleString()}</span>
                         </div>
                       </div>
                     </div>
@@ -1217,9 +1217,9 @@ export function MapView({ shipments, selectedShipmentId, onSelect }: MapViewProp
               ">
                 ${isOrigin ? `<div style="font-size: 16px; color: #0A5C3A; font-weight: 700; margin-bottom: 4px;">${activeShipment.origin}</div>` : ''}
                 ${isDestination ? `<div style="font-size: 16px; color: #0A5C3A; font-weight: 700; margin-bottom: 4px;">${activeShipment.destination}</div>` : ''}
-                ${isOriginCoastal ? `<div style="font-size: 14px; color: #666; margin-bottom: 4px;">${extractCountry(activeShipment.origin)} Port</div>` : ''}
-                ${isSeaWaypoint ? `<div style="font-size: 14px; color: #666; margin-bottom: 4px;">Ocean Route</div>` : ''}
-                ${isDestCoastal ? `<div style="font-size: 14px; color: #666;">${extractCountry(activeShipment.destination)} Port</div>` : ''}
+                ${isOriginCoastal ? `<div style="font-size: 14px; color: #000; font-weight: 600; margin-bottom: 4px;">${extractCountry(activeShipment.origin)} Port</div>` : ''}
+                ${isSeaWaypoint ? `<div style="font-size: 14px; color: #000; font-weight: 600; margin-bottom: 4px;">Ocean Route</div>` : ''}
+                ${isDestCoastal ? `<div style="font-size: 14px; color: #000; font-weight: 600;">${extractCountry(activeShipment.destination)} Port</div>` : ''}
               </div>
             </div>
           </div>
